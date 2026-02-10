@@ -25,10 +25,10 @@ export default function Message1({ data }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsAnswerVisible(false);
-        }, 2000);
+        }, 4000);
         const timer2 = setTimeout(() => {
             setShow(true);
-        }, 4000);
+        }, 4500);
         return () => {
             clearTimeout(timer);
             clearTimeout(timer2);
@@ -134,32 +134,34 @@ export default function Message1({ data }) {
                             alignContent: 'center',
                             pointerEvents: 'none'
                         }}>
-                        <motion.h1
-                            animate={{ opacity: isAnswerVisible ? 1 : 0 }}
-                            transition={{ delay: 3, duration: 1.5 }}
-                            style={{
-                                pointerEvents: 'none',
-                                fontSize: '80px',
-                                backgroundColor: "white"
-                            }}>
-                            <BlurText
-                                text="Congratulations!"
-                                delay={200}
-                                animateBy="words"
-                                direction="top"
-                                animationFrom={{ filter: 'blur(10px)', opacity: 0, y: -50 }}
-                                animationTo={[
-                                    {
-                                        filter: 'blur(5px)',
-                                        opacity: 0.5,
-                                        y: 5
-                                    },
-                                    { filter: 'blur(0px)', opacity: 1, y: 0 }
-                                ]}
-                                onAnimationComplete={handleAnimationComplete}
-                            />
-                        </motion.h1>
-                        {show &&
+                        {isAnswerVisible && (
+                            <motion.h1
+                                animate={{ opacity: isAnswerVisible ? 1 : 0 }}
+                                transition={{ delay: 3, duration: 1.5 }}
+                                style={{
+                                    pointerEvents: 'none',
+                                    fontSize: '80px',
+                                    backgroundColor: "white"
+                                }}>
+                                <BlurText
+                                    text="Congratulations!"
+                                    delay={200}
+                                    animateBy="words"
+                                    direction="top"
+                                    animationFrom={{ filter: 'blur(10px)', opacity: 0, y: -50 }}
+                                    animationTo={[
+                                        {
+                                            filter: 'blur(5px)',
+                                            opacity: 0.5,
+                                            y: 5
+                                        },
+                                        { filter: 'blur(0px)', opacity: 1, y: 0 }
+                                    ]}
+                                    onAnimationComplete={handleAnimationComplete}
+                                />
+                            </motion.h1>
+                        )}
+                        {show && (
                             <motion.h1
                                 animate={{ opacity: show ? 0 : 1 }}
                                 transition={{ delay: 5, duration: 1.5 }}
@@ -185,7 +187,7 @@ export default function Message1({ data }) {
                                     onAnimationComplete={handleAnimationComplete}
                                 />
                             </motion.h1>
-                        }
+                        )}
                     </section>
                 }
             </div>

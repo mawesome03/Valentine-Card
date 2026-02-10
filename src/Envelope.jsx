@@ -4,9 +4,7 @@ import Close from './assets/Close.png';
 import Open from './assets/openeddd.png';
 import Letter from './assets/Letter.png'
 import { motion, scale } from "framer-motion"
-import SplitText from "./component/splitText";
 import Message1 from "./Message 1";
-import Message from "./Yes"
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button } from '@mantine/core';
 
