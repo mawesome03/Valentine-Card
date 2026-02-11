@@ -144,7 +144,7 @@ export default function Message1({ data }) {
                                     backgroundColor: "white"
                                 }}>
                                 <BlurText
-                                    text="Congratulations!"
+                                    text="No take back!"
                                     delay={200}
                                     animateBy="words"
                                     direction="top"
