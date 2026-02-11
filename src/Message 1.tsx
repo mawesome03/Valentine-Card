@@ -25,10 +25,10 @@ export default function Message1({ data }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsAnswerVisible(false);
-        }, 4000);
+        }, 5000);
         const timer2 = setTimeout(() => {
             setShow(true);
-        }, 5000);
+        }, 5500);
         return () => {
             clearTimeout(timer);
             clearTimeout(timer2);
@@ -89,7 +89,7 @@ export default function Message1({ data }) {
                             boxShadow: "0px 5px 15px rgba(0,0,0,0.3)"
                         }}
                         whileTap={{ scale: 0.95 }}
-                        transition={{ delay: 3, duration: 1.5 }}
+                        transition={{ delay: 1, duration: 1.5 }}
                         style={{
                             padding: "12px 24px",
                             border: "none",
@@ -109,7 +109,7 @@ export default function Message1({ data }) {
                             y: position.y
                         }}
                         transition={{
-                            delay: 3,
+                            delay: 1,
                             duration: 1.5,
                             x: { type: "spring", stiffness: 300, damping: 20 },
                             y: { type: "spring", stiffness: 300, damping: 20 }
@@ -137,7 +137,7 @@ export default function Message1({ data }) {
                         {isAnswerVisible && (
                             <motion.h1
                                 animate={{ opacity: isAnswerVisible ? 1 : 0 }}
-                                transition={{ delay: 5, duration: 1.5 }}
+                                transition={{ delay: 1, duration: 3 }}
                                 style={{
                                     pointerEvents: 'none',
                                     fontSize: '80px',
