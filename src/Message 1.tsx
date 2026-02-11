@@ -65,7 +65,7 @@ export default function Message1({ data }) {
                             backgroundColor: 'white'
                         }}
                     >
-                        Will you be my husband?
+                        Will you be my valentine?
                     </motion.h1>
                 </section>
                 <section
@@ -171,7 +171,7 @@ export default function Message1({ data }) {
                                     backgroundColor: "white"
                                 }}>
                                 <BlurText
-                                    text="Now, where's my ring?"
+                                    text="Now, where's our date?"
                                     delay={400}
                                     animateBy="words"
                                     direction="top"
