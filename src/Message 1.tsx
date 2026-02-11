@@ -28,7 +28,7 @@ export default function Message1({ data }) {
         }, 4000);
         const timer2 = setTimeout(() => {
             setShow(true);
-        }, 4500);
+        }, 5000);
         return () => {
             clearTimeout(timer);
             clearTimeout(timer2);
@@ -137,7 +137,7 @@ export default function Message1({ data }) {
                         {isAnswerVisible && (
                             <motion.h1
                                 animate={{ opacity: isAnswerVisible ? 1 : 0 }}
-                                transition={{ delay: 3, duration: 1.5 }}
+                                transition={{ delay: 5, duration: 1.5 }}
                                 style={{
                                     pointerEvents: 'none',
                                     fontSize: '80px',
@@ -164,7 +164,7 @@ export default function Message1({ data }) {
                         {show && (
                             <motion.h1
                                 animate={{ opacity: show ? 0 : 1 }}
-                                transition={{ delay: 5, duration: 1.5 }}
+                                transition={{ delay: 10, duration: 1.5 }}
                                 style={{
                                     pointerEvents: 'none',
                                     fontSize: '80px',
