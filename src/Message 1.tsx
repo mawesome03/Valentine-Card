@@ -65,7 +65,7 @@ export default function Message1({ data }) {
                             backgroundColor: 'white'
                         }}
                     >
-                        Will you be my valentines?
+                        Will you be my valentine?
                     </motion.h1>
                 </section>
                 <section
